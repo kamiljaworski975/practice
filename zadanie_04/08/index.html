@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8</title>
+</head>
+<style>
+    .box {
+        width: 30px;
+        height: 30px;
+        background-color: blue;
+        position: absolute;
+        left: 300px;
+        top: 300px;
+    }
+    .rock-1 {
+        width: 50px;
+        height: 600px;
+        position: absolute;
+        background-color: brown;
+        top: 0px;
+        left: 350px;
+    }
+</style>
+<body>
+<div class="box"></div>
+<div class="rock-1"></div>
+<div class="rock-2"></div>
+
+<script>
+    // Napisz skrypt, który przesunie element w prawo lub w lewo, w zależności czy zostnie kliknięta strzałka w lewo czy w prawo.
+    const box = document.querySelector(".box");
+    let left = 300;
+    let topp = 300;
+    let rockleft = 500;
+    const changePosition = function(e) {
+            switch (e.keyCode) {
+                case 37:
+                    box.style.left = `${left > 0 ? --left : left}px`; break;
+                case 39:
+                    box.style.left = `${left < (window.innerWidth - 50) ? ++left : left}px`; break;
+                case 38:
+                    box.style.top = `${topp > 0 ? --topp : topp}px`; break;
+                case 40:
+                    box.style.top = `${topp < (window.innerHeight - 30) ? ++topp : topp}px`; break;    
+            }
+    };
+     window.addEventListener("keydown", changePosition);
+    
+    
+</script>
+</body>
+</html>

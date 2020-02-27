@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "username": "Agnieszka",
+    "points": 180
+  },
+  {
+    "id": 2,
+    "username": "Marcin",
+    "points": 100
+  },
+  {
+    "id": 3,
+    "username": "Natalia",
+    "points": 78
+  },
+  {
+    "id": 4,
+    "username": "Basia",
+    "points": 190
+  },
+  {
+    "id": 5,
+    "username": "Halina",
+    "points": 80
+  },
+  {
+    "id": 6,
+    "username": "Damian",
+    "points": 20
+  },
+  {
+    "id": 7,
+    "username": "Paweł",
+    "points": 570
+  },
+  {
+    "id": 8,
+    "username": "Beata",
+    "points": 30
+  },
+  {
+    "id": 9,
+    "username": "Adam",
+    "points": 30
+  },
+  {
+    "id": 10,
+    "username": "Andrzej",
+    "points": 234
+  }
+]

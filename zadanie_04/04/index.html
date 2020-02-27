@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<button>Podaj imię</button>
+<h1 id="hello">Cześć "tutaj wstaw imię"!</h1>
+<script>
+    // Napisz skrypt, który na kliknięcie przycisku pokaże komunikat z możliwością wpisania tekstu, który potem
+    // zostanie użyty do zastąpienia "tutaj wstaw imię" w hello
+
+    
+    
+    let question = function () {
+        document.querySelector('button').addEventListener('click', function() {
+        let comunicat = window.prompt('Wpisz swoje imie');
+        document.querySelector('#hello').textContent = 'Cześć' + ' ' + comunicat;
+
+    });
+    }
+
+    question();
+
+    // * Dodaj możliwość pojawienia się tego samego komunikatu po wpisaniu na klawiaturze CTRL + O
+    
+    function KeyPress(e) {
+      var evtobj = window.event? event : e
+      if (evtobj.keyCode == 48 && evtobj.ctrlKey) {
+          let comunicat = window.prompt("Podaj swoje imie");
+        document.querySelector('#hello').textContent = 'Cześć' + ' ' + comunicat;
+      }
+}
+
+document.onkeydown = KeyPress;
+
+</script>
+</body>
+</html>

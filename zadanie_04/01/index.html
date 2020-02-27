@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<script>
+    // Napisz skrypt, który zmienia losowo kolor strony co 1s.
+
+    var colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+
+    // * Napisz tak skrypt by kolory się nie powtarzały, po skończeniu się kolorów wszytsko powinno zostać znowione znowu.
+    const body = document.querySelector("body");
+        const color = ['red', 'blue', 'green', 'yellow', 'purple', 'orange'];
+        let newColor = [...color];
+        function change() {
+            let indexColor = Math.floor(Math.random() * newColor.length);
+            body.style.backgroundColor = newColor[indexColor];
+            newColor.splice(indexColor, 1);
+            body.style.transition = "950ms"
+            if (newColor.length === 0) {
+                newColor = [...color];
+            }
+        };
+        setInterval(change, 2000);
+
+</script>
+</body>
+</html>

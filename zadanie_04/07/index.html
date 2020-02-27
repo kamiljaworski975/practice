@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+<body>
+<form id="frm1">
+    <label for="name">Imię</label>
+    <input id="name" name="name" />
+    <label for="surname">Nazwisko</label>
+    <input id="surname" name="surname" />
+    <input type="submit"  value="submit" />
+</form>
+<h1 id="hello"></h1>
+<script>
+    // Napisz skrypt, który po wysłaniu formularza wyświetli tekst z wysłanym imieniem i nazwiskiem w elemencie hello.
+    // Po 2s tekst w hello powinien się wyczyścić.
+
+
+    const form = document.querySelector("form");
+        const name = document.querySelector("#name");
+        const surname = document.querySelector("#surname");
+        const hello = document.getElementById("hello");
+        const res = function() {
+             hello.innerText = "";
+        }
+
+        form.addEventListener("submit", function(event) {
+            // Submit próbuje wysłać info na serwer, dlatego trzeba zastosować preventDefault, zeby nie probował tego robić. Gdy tego nie zrobimy, imiona się wyswietla i od razu znikna, poniewaz submit resetuje.
+            event.preventDefault();
+            // $ PRZERYWA gravisa, dzięki czemu zachowujemy formatowanie. sotsujemy ${} ${} 
+            hello.innerText = `Nazywasz się: ${name.value} ${surname.value}`;
+            setTimeout(res, 2000);
+        });
+
+
+'czesc ${funkcja}  czesc'
+</script>
+</body>
+</html>

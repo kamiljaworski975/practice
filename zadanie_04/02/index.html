@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+<h1 id="counter">0</h1>
+<button>Dodaj</button>
+<button>Odejmij</button>
+<script>
+    // Napisz skrypt, który na kliknięcie przycisku zwiększy lub zmniejszy wartość w elemencie counter.
+
+    // * Po osięgnięciu 10 lub -10, przycisk zwiększania lub zmiejszania powinien się zablokować. (zakres od -10 do 10)
+
+    const add = document.querySelectorAll("button")[0];
+        const sub = document.querySelectorAll("button")[1];
+        const counter = document.getElementById("counter");
+        let variable = 0;
+        add.addEventListener("click", () => {
+            variable++;
+            counter.innerText = variable;
+            if (variable == 10) {
+                add.disabled = true;
+            } else {
+                add.disabled = false;
+                substract.disabled = false;
+            };
+        });
+        sub.addEventListener("click", () => {
+            variable--;
+            counter.innerText = variable;
+            if (variable == -10) {
+                sub.disabled = true;
+            } else {
+                add.disabled = false;
+                sub.disabled = false;
+            };
+        });
+</script>
+</body>
+</html>
